@@ -7,10 +7,12 @@ mod tests {
     #[test]
     fn indexing_tuple() {
         let numbers = (1, 2, 3);
+        //             ^  ^  ^
+        //           .0 .1 .2  <- These are the tuple indices
 
-        // TODO: Use a tuple index to access the second element of `numbers`
-        // and assign it to a variable called `second`.
-        // let second = ???;
+        // Access the second element using tuple indexing
+        let second = numbers.1;
+        //                   ^ Index 1 gets the second element (value: 2)
 
         assert_eq!(second, 2, "This is not the 2nd number in the tuple!");
     }
